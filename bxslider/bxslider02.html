@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.slider').bxSlider();
+        })
+    </script>
+    <style>
+        .sliderWrap{width: 1240px;margin: 0 auto;position: relative;}
+        .sliderWrap .slider .txt{position: absolute;right: 130px;top: 100px;
+        width: 400px;}
+        .txt h2{font-size: 1.8em;margin-bottom: 5px;position: relative;
+        }
+        .txt h2:after{content: "";width: 50px;height: 4px;
+        background: #000;display: block;
+        position: absolute;top: -10px;
+        border-radius: 5px;}
+        .txt p{margin-bottom: 30px;}
+        .txt a.btn{display: block;width: 150px;text-align: center;
+        border: 1px solid #000;line-height: 35px;font-size: 10px;
+        border-radius: 28px;transition: 0.3s;
+    }
+        .txt a.btn:hover{background: #000;color: aliceblue;}
+
+        .sliderPager{position: absolute;bottom: 0;width: 100%;}
+        .sliderPager .bxpager{}
+        .sliderPager .bxpager a{float: left;display: block;
+        width: calc(100% / 3 );text-align: center;line-height: 40px;
+    background: skyblue;}
+        .sliderpager .bxpager a.activer{background: pink}
+        .sliderpager .bxpager a:hover{background: red}
+    </style>
+</head>
+<body>
+    <div class="sliderWrap">
+        <ul class="slider">
+            <li><img src="images/main_slider01.jpg" alt="">
+            <div class="txt">
+                <h2>사랑과 행복을 나누는 마음</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur 
+                    adipisicing elit. Delectus, porro.</p>
+                <a href="#" class="btn">바로가기</a>
+            </div>
+            </li>
+            <li><img src="images/main_slider02.jpg" alt="">
+                <div class="txt">
+                    <h2>사랑과 행복을 나누는 마음</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur 
+                        adipisicing elit. Delectus, porro.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+            <li><img src="images/main_slider03.jpg" alt="">
+                <div class="txt">
+                    <h2>사랑과 행복을 나누는 마음</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur 
+                        adipisicing elit. Delectus, porro.</p>
+                    <a href="#" class="btn">바로가기</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sliderPager">
+        <div class="bxpager clerafix">
+            <a href="#" data-slider-index="1">meun1</a>
+            <a href="#" data-slider-index="2">meun2</a>
+            <a href="#" data-slider-index="3">meun3</a>
+        </div>
+    </div>
+</body>
+</html>
